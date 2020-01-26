@@ -1,0 +1,50 @@
+Arguments: 
+  /Users/rasjonell/.nvm/versions/node/v12.9.1/bin/node /Users/rasjonell/.yarn/bin/yarn.js policies set-version ^2.0.0
+
+PATH: 
+  /Users/rasjonell/bin:/Users/rasjonell/.yarn/bin:/Users/rasjonell/.config/yarn/global/node_modules/.bin:/usr/local/opt/openssl@1.1/bin:/Users/rasjonell/.nvm/versions/node/v12.9.1/bin:/Users/rasjonell/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.9.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: Release not found: ^2.0.0
+      at /Users/rasjonell/.yarn/lib/cli.js:90086:17
+      at Generator.next (<anonymous>)
+      at step (/Users/rasjonell/.yarn/lib/cli.js:304:30)
+      at /Users/rasjonell/.yarn/lib/cli.js:315:13
+      at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+npm manifest: 
+  {
+    "name": "auth",
+    "version": "0.0.0",
+    "description": "Foxx TypeScript Service",
+    "main": "dist/entry.js",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+      "build": "tsc -p .",
+      "config:editor": "yarn pnpify --sdk"
+    },
+    "devDependencies": {
+      "@types/arangodb": "^3.5.3",
+      "@types/node": "^13.5.0",
+      "@yarnpkg/pnpify": "^2.0.0-rc.16",
+      "joi": "^14.3.1",
+      "tslint": "^6.0.0",
+      "typescript": "^3.7.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/foxx-manifest",
+  "main": "dist/entry.js",
+  "engines": {
+    "arangodb": "^3.0.0"
+  },
+  "name": "foxx_typescript",
+  "version": "0.0.0",
+  "tests": "test/**/*.js"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "auth",
+  "version": "0.0.0",
+  "description": "Foxx TypeScript Service",
+  "main": "dist/entry.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "config:editor": "yarn pnpify --sdk"
+  },
+  "devDependencies": {
+    "@types/arangodb": "^3.5.3",
+    "@types/node": "^13.5.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.16",
+    "joi": "^14.3.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
