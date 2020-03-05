@@ -29,7 +29,3 @@ In VSCode you also need to explicitly specify the version of TypeScript to use.
 1. Pick "Use Workspace Version"
 
 More info [here](https://next.yarnpkg.com/advanced/editor-sdks)
-
-## License
-
-Copyright (c) 2020 Squash Consulting. All rights reserved.
