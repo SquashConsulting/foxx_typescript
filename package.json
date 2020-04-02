@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Foxx TypeScript Service",
   "main": "dist/entry.js",
-  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "tsc -p ."
