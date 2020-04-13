@@ -1,7 +1,7 @@
 ---
-arbitrary: <% if ( typeof namespace === 'undefined') { ns = '' } else { ns = namesapace } %>
+arbitrary: <% if ( typeof namespace === 'undefined') { ns = '/' } else { ns = namespace } %>
 to: src/routes/<%= collection %>.ts
-sh: HYGEN_OVERWRITE=1 node_modules/.bin/hygen routes inject --collection <%= collection %> --namespace <%= ns %>
+sh: HYGEN_OVERWRITE=1 node_modules/.bin/hygen routes inject:import --collection <%= collection %> --namespace <%= ns %>
 ---
 <%
   const controller = `${h.capitalize(collection)}Controller`;
