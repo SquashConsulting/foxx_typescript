@@ -1,6 +1,6 @@
 # Foxx TypeScript Service Template
 
-#### Update: The next version of the template is being developed on the [next](https://github.com/SquashConsulting/foxx_typescript/tree/next) branch. This template will be part of the [kaliningrad](https://github.com/squashconsulting/kaliningrad) project. Backwards compatability will be maintained, however, the usage of the template is encoureged through the kaliningrad's generator. Please note, you will still be able to use this as a standalone template.
+#### Update: The next version of the template is being developed on the [next](https://github.com/SquashConsulting/foxx_typescript/tree/next) branch. It will support `npm`, as we decided to drop support for `yarn 2.0`, because of some unexpected behaivours. This template will be part of the [kaliningrad](https://github.com/squashconsulting/kaliningrad) project. Backwards compatability will be maintained, however, the usage of the template is encoureged through the kaliningrad's generator. Please note, you will still be able to use this as a standalone template. 
  
 ### Install packages
 
