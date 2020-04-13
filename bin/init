@@ -1,0 +1,23 @@
+#!/bin/sh
+
+function main {
+  HYGEN_OVERWRITE=1 node_modules/.bin/hygen bootstrap setup --collections $1 --edges $2 > /dev/null
+
+  echo "\n> Project Initiated\n"
+
+  for collection in $(echo $1 | sed "s/,/ /g")
+  do
+    echo "> Adding CRUD actions for collection '$collection'"
+
+    HYGEN_OVERWRITE=1 node_modules/.bin/hygen bootstrap crud --collection $collection > /dev/null
+  done
+
+  echo "\n> Bootstrap Complete!\n"
+}
+
+if [[ $# -eq 2 ]] ; then
+  main $1 $2
+else
+  echo "\nInvalid number of parameters, expected 2 got $#\n"
+  exit 1
+fi

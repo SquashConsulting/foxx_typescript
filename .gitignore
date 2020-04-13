@@ -5,3 +5,4 @@ npm-debug.log*
 dist/
 .vscode
 .pnp.js
+*.swp
