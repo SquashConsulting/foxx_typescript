@@ -1,5 +1,7 @@
 # Foxx TypeScript Service Template
 
+#### Update: The next version of the template is being developed on the [next](https://github.com/SquashConsulting/foxx_typescript/tree/next) branch. This template will be part of the [kaliningrad](https://github.com/squashconsulting/kaliningrad) project. Backwards compatability will be maintained, however, the usage of the template is encoureged through the kaliningrad's generator. Please note, you will still be able to use this as a standalone template.
+ 
 ### Install packages
 
 ```sh
@@ -7,6 +9,7 @@ yarn install
 ```
 
 #### Note: this projcet uses yarn version >= 2.0, and follows the `Zero Install` ideology. Follow [this link](https://yarnpkg.com/features/zero-installs) for more information.
+
 
 ### Install/Upgrade Foxx Service
 
