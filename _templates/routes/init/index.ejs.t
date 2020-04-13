@@ -1,23 +1,17 @@
 ---
 to: src/routes/index.ts
-unless_exists: false
 ---
 <%
-  const { collections } = JSON.parse(config);
+  const cols = collections.split(',');
 -%>
 import createRouter from '@arangodb/foxx/router';
 
 import { pipe } from '../utils';
 
-<% collections.forEach(collection => { -%>
+<% cols.forEach(collection => { -%>
 import <%= collection %>Router from './<%= collection %>';
 <% }) -%>
 
-const router: Foxx.Router = pipe(
-  createRouter,
-  <% collections.forEach(collection => { -%>
-  <%= collection %>Router,
-  <% }) -%>
-)();
+const rootRouter: Foxx.Router = createRouter();
 
-export default router;
+export default rootRouter;
