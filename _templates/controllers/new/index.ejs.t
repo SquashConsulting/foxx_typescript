@@ -6,15 +6,29 @@ to: src/controllers/<%= collection %>.ts
 -%>
 import { db } from '@arangodb';
 
+/* Collection Definitions */
+
 const <%= model %>: ArangoDB.Collection = db._collection('<%= collection %>');
 
-export function list(): ArangoDB.Document[] {
+/* Exports */
+
+export {
+  list,
+  find,
+  create,
+  edit,
+  remove,
+}
+
+/* Module Functions */
+
+function list(): ArangoDB.Document[] {
   const <%= collection %>: ArangoDB.Document[] = <%= model %>.all().toArray();
 
   return <%= collection %>;
 }
 
-export function find(_key: string, res: Foxx.Response): ArangoDB.Document {
+function find(_key: string, res: Foxx.Response): ArangoDB.Document {
   const document: ArangoDB.Document = <%= model %>.document({ _key });
 
   if (!document) res.throw('not found');
@@ -22,7 +36,7 @@ export function find(_key: string, res: Foxx.Response): ArangoDB.Document {
   return document;
 }
 
-export function create(body: object, res: Foxx.Response): ArangoDB.Document {
+function create(body: object, res: Foxx.Response): ArangoDB.Document {
   try {
     const meta: ArangoDB.InsertResult = <%= model %>.save(body);
     const result: ArangoDB.Document = { ...meta, ...body };
@@ -34,7 +48,7 @@ export function create(body: object, res: Foxx.Response): ArangoDB.Document {
   }
 }
 
-export function edit(
+function edit(
   _key: string,
   body: object,
   res: Foxx.Response,
@@ -50,6 +64,6 @@ export function edit(
   }
 }
 
-export function remove(_key: string): void {
+function remove(_key: string): void {
   <%= model %>.remove({ _key });
 }
